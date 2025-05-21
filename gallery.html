@@ -1,0 +1,384 @@
+<!DOCTYPE html> <!-- Document type declaration -->
+<html lang="en"> <!-- Start of HTML document with language set to English -->
+    <head> <!-- Head section starts -->
+        <meta charset="UTF-8"> <!-- Character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design meta -->
+        <link rel="stylesheet" href="style.css"> <!-- External CSS file -->
+        <title>Gallery</title> <!-- Page title -->
+        <!-- Favicon -->
+        <link rel="icon" href="logo.png" type="image/icon"> <!-- Sets the favicon for the page -->
+        <style>
+            /* Card A styles */
+            /* Card A styles */
+            .a {
+                position: relative; /* For absolute children */
+                width: 400px;
+                height: 300px;
+                background-image: url(home.jpg); /* Background image */
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+                margin-left: 40px;
+                margin-right: 70px;
+                margin-bottom: 70px;
+                border: solid;
+                border-radius: 10px;
+            }
+            .a__content {
+                position: absolute; /* Center content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #fff;
+                opacity: 0; /* Hidden by default */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+            }
+            .a:hover .a__content {
+                transform: translate(-50%, -50%) rotate(0deg); /* Rotate to normal on hover */
+                opacity: 1; /* Show content on hover */
+            }
+            .a__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+            }
+            .a__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+            }
+            .a:hover {
+                transform: rotate(-3deg) scale(1.1); /* Card tilt and scale on hover */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            }
+            /* Card B styles */
+            .b {
+                position: relative; /* For absolute children */
+                width: 400px;
+                height: 300px;
+                background-image: url(download\ \(2\).jpg); /* Background image */
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+                margin-left: 40px;
+                margin-right: 70px;
+                margin-bottom: 70px;
+                border: solid;
+                border-radius: 10px;
+            }
+            .b__content {
+                position: absolute; /* Center content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #fff;
+                opacity: 0; /* Hidden by default */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+            }
+            .b:hover .b__content {
+                transform: translate(-50%, -50%) rotate(0deg); /* Rotate to normal on hover */
+                opacity: 1; /* Show content on hover */
+            }
+            .b__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+            }
+            .b__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+            }
+            .b:hover {
+                transform: rotate(-3deg) scale(1.1); /* Card tilt and scale on hover */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            }
+            /* Card C styles */
+            .c {
+                position: relative; /* For absolute children */
+                width: 400px;
+                height: 300px;
+                background-image: url(logo.png); /* Background image */
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+                margin-left: 40px;
+                margin-right: 70px;
+                margin-bottom: 70px;
+                border: solid;
+                border-radius: 10px;
+            }
+            .c__content {
+                position: absolute; /* Center content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #fff;
+                opacity: 0; /* Hidden by default */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+            }
+            .c:hover .c__content {
+                transform: translate(-50%, -50%) rotate(0deg); /* Rotate to normal on hover */
+                opacity: 1; /* Show content on hover */
+            }
+            .c__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+            }
+            .c__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+            }
+            .c:hover {
+                transform: rotate(-3deg) scale(1.1); /* Card tilt and scale on hover */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            }
+            /* Card CA styles */
+            .ca {
+                position: relative; /* For absolute children */
+                width: 400px;
+                height: 300px;
+                background-image: url(assets_task_01jvr87ysqeyja5r6ehd75a2rs_1747791991_img_0.webp); /* Background image */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+                margin-left: 40px;
+                margin-right: 70px;
+                margin-bottom: 70px;
+                border: solid;
+                border-radius: 10px;
+            }
+            .ca__content {
+                position: absolute; /* Center content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #fff;
+                opacity: 0; /* Hidden by default */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+            }
+            .ca:hover .ca__content {
+                transform: translate(-50%, -50%) rotate(0deg); /* Rotate to normal on hover */
+                opacity: 1; /* Show content on hover */
+            }
+            .ca__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+            }
+            .ca__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+            }
+            .ca:hover {
+                transform: rotate(-3deg) scale(1.1); /* Card tilt and scale on hover */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            }
+            /* Card CAR styles */
+            .car {
+                position: relative; /* For absolute children */
+                width: 400px;
+                height: 300px;
+                background-image: url( "naawi-oodena-locator-map.avif"); /* Background image */
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+                margin-left: 40px;
+                margin-right: 70px;
+                border: solid;
+                border-radius: 10px;
+            }
+            .car__content {
+                position: absolute; /* Center content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #fff;
+                opacity: 0; /* Hidden by default */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+            }
+            .car:hover .car__content {
+                transform: translate(-50%, -50%) rotate(0deg); /* Rotate to normal on hover */
+                opacity: 1; /* Show content on hover */
+            }
+            .car__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+            }
+            .car__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+            }
+            .car:hover {
+                transform: rotate(-3deg) scale(1.1); /* Card tilt and scale on hover */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            }
+            /* Card CARD styles */
+            .card {
+                position: relative; /* For absolute children */
+                width: 400px;
+                height: 300px;
+                background-image: url(Build.jfif); /* Background image */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+                margin-left: 40px;
+                margin-right: 70px;
+                margin-bottom: 70px;
+                border: solid;
+                border-radius: 10px;
+            }
+            .card:hover {
+                transform: rotate(-3deg) scale(1.1); /* Card tilt and scale on hover */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            }
+            .card__content {
+                position: absolute; /* Center content */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color: #fff;
+                opacity: 0; /* Hidden by default */
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Smooth transition */
+            }
+            .card:hover .card__content {
+                transform: translate(-50%, -50%) rotate(0deg); /* Rotate to normal on hover */
+                opacity: 1; /* Show content on hover */
+            }
+            .card__title {
+                margin: 0;
+                font-size: 24px;
+                color: #333;
+                font-weight: 700;
+            }
+            .card__description {
+                margin: 10px 0 0;
+                font-size: 14px;
+                color: #777;
+                line-height: 1.4;
+            }
+            nav {
+                margin-bottom: 80px; /* Space below nav */
+            }
+            footer {
+                margin-top: 30px; /* Space above footer */
+            }
+            .gallery {
+                display: flex; /* Flexbox for gallery */
+                flex-direction: row; /* Row direction */
+            }
+        </style>
+    </head>
+    <body> <!-- Body starts -->
+        <nav> <!-- Navigation bar -->
+            <h1>
+                <img src="logo.png" alt="" style="width: 10%; height: 10%;"> <!-- Logo image -->
+                <img src="default-monochrome-white.svg" alt="My website logo" style="width: 50%;"> <!-- Secondary logo -->
+            </h1>
+            <ul>
+                <li><a href="index.html">HOME</a></li> <!-- Home link -->
+                <li><a href="naawi.html">Info</a></li> <!-- Info link -->
+                <li><a href="gallery.html">Gallery</a></li> <!-- Gallery link -->
+                <li><a href="contact.html">Contact</a></li> <!-- Contact link -->
+            </ul>
+        </nav>
+        <main class="gallery"> <!-- First gallery row -->
+            <!-- Card 1: Workers -->
+            <div class="card">
+                <div class="card__content">
+                    <p class="card__title">Workers</p>
+                    <p class="card__description">
+                        Image of the Naawi-Oodena team in action, showcasing their dedication to the community and the environment. The team collaborates on various projects, from land stewardship to organizing community events, all while fostering a spirit of unity and respect for Indigenous traditions. Their ongoing efforts highlight the importance of teamwork, cultural preservation, and sustainable development within Naawi-Oodena.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 2: Plan -->
+            <div class="car">
+                <div class="car__content">
+                    <p class="car__title">Plan</p>
+                    <p class="car__description">
+                        The plan for building Naawi-Oodena centers on creating a vibrant, inclusive community that honors Indigenous heritage while embracing modern sustainability practices. The development aims to provide affordable housing, community spaces, and green areas, all designed in consultation with Indigenous leaders and local residents. Emphasis is placed on environmental stewardship, cultural preservation, and fostering a sense of belonging for all who live and work in Naawi-Oodena.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 3: Buildings -->
+            <div class="ca">
+                <div class="ca__content">
+                    <p class="ca__title">Buildings</p>
+                    <p class="ca__description">
+                        The buildings in Naawi-Oodena are designed with a strong focus on sustainability, community, and cultural respect. Unlike typical apartment complexes, these buildings incorporate eco-friendly materials, energy-efficient systems, and green spaces that promote environmental stewardship. The architecture reflects Indigenous values, fostering a sense of belonging and connection among residents.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <main class="gallery"> <!-- Second gallery row -->
+            <!-- Card 4: Logo -->
+            <div class="c">
+                <div class="c__content">
+                    <p class="c__title">logo</p>
+                    <p class="c__description">
+                        The logo image symbolizes unity, growth, and the deep connection between people and the land. Its design incorporates elements that reflect Indigenous heritage and values, emphasizing community, respect for nature, and a shared vision for a sustainable future. The logo serves as a visual representation of Naawi-Oodena’s commitment to honoring tradition while fostering progress and inclusivity.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 5: House Example -->
+            <div class="a">
+                <div class="a__content">
+                    <p class="a__title">House Example</p>
+                    <p class="a__description">
+                        Our homes are built to be stronger and more resilient than typical houses, using high-quality, durable materials that withstand harsh weather and changing climates. We prioritize energy efficiency, advanced insulation, and sustainable construction methods, ensuring long-lasting comfort and lower utility costs. Each home is thoughtfully designed to reflect community values, promote safety, and provide a healthier living environment for families. This commitment to excellence makes our homes a superior choice for lasting value and peace of mind.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 6: Advantages -->
+            <div class="b">
+                <div class="b__content">
+                    <p class="b__title">Advantages</p>
+                    <p class="b__description">
+                        Choosing us means partnering with a team dedicated to quality, integrity, and community. We stand out from others by prioritizing sustainable building practices, deep respect for Indigenous traditions, and a genuine commitment to the well-being of our residents. Our approach combines environmental responsibility and cultural sensitivity, ensuring every project not only meets but exceeds expectations. By selecting us, you invest in a future-focused, inclusive community where every detail is crafted with care and purpose.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer> <!-- Footer section -->
+            <p>
+                Page created by Naawi-Oodena Team | Contact: <a href="mailto:info@naawi-oodena.com">info@naawi-oodena.com</a>
+            </p>
+        </footer>
+    </body>
+</html>

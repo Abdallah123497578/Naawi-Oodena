@@ -1,0 +1,72 @@
+/* === Base Styles === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: #F5F0E1; /* light warm cream */
+}
+
+h2, h3, p, li {
+    color: black;
+}
+
+/* === Header Styles === */
+header {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b46134; /* light brown */
+}
+/* === Navigation Styles === */
+
+nav ul {
+    float: right;
+    line-height: 80px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0px 5px;
+}
+nav {
+    height: 50px;
+    font-size: larger;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: #C46A3A; /* light brown */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 7px 8px;
+}
+/* === Footer === */
+footer {
+    text-align: center;
+    font-size: medium;
+    font-family: serif;
+    background-color: #b46134; /* light brown */
+    padding: 10px;
+    margin: 0;
+}
+
+footer a, footer p {
+    color: black;
+    text-decoration: underline;
+}
+footer a:hover{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}

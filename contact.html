@@ -1,0 +1,210 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element with language set to English -->
+    <head>
+        <meta charset="UTF-8"> <!-- Sets character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile -->
+        <title>Contact Us</title> <!-- Title shown in browser tab -->
+        <!-- Favicon -->
+        <link rel="icon" href="logo.png" type="image/icon"> <!-- Sets the favicon for the page -->
+        <link rel="stylesheet" href="style.css"> <!-- External CSS file -->
+        <style>
+            /* Reset default browser styles and set box-sizing */
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            /* Prevent scrolling on body */
+            body{
+                overflow: hidden;
+            }
+            /* Main container styling */
+            .hero{
+                width: 100%;
+                min-height: 100vh;
+                background-color: #F5F0E1; /* light warm cream */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            /* Heading style */
+            .hero h1{
+                color: black;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            /* Signup box container */
+            .signup-box{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 90%;
+                max-width: 800px;
+                background: #fff;
+            }
+            /* Left side of signup box (form) */
+            .left-box{
+                padding: 50px;
+                background: rgba(212, 108, 10, 0.76); /* orange overlay */
+                flex-basis: 50%;
+                flex-grow: 1;
+                color: black;
+            }
+            /* Right side of signup box (social links) */
+            .right-box{
+                padding: 50px;
+                flex-basis: 50%;
+                flex-grow: 1;
+            }
+            /* Input fields styling */
+            .input-box{
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #fff;
+                outline: none;
+                color: black;
+                font-size: 12px;
+                background: transparent;
+            }
+            /* Placeholder text styling */
+            ::placeholder{
+                color: black;
+                font-size: 15px;
+            }
+            /* Checkbox margin */
+            input[type=checkbox]{
+                margin-top: 30px;
+            }
+            /* Label styling in left box */
+            .left-box label{
+                font-size: 15px;
+            }
+            /* Signup button styling */
+            .left-box button{
+                width: 100%;
+                background: #fff;
+                padding: 10px;
+                border: 0;
+                outline: none;
+                font-size: 16px;
+                margin-top: 20px;
+                cursor: pointer;
+                transition: background 0.5s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            /* Button hover effect */
+            .left-box button:hover{
+                font-weight: 500;
+                background: black;
+                color: white;
+            }
+            /* Arrow span inside button, hidden by default */
+            .left-box button span{
+                display: inline-block;
+                width: 0px;
+                overflow: hidden;
+                transition: width 0.5s;
+            }
+            /* Show arrow on hover */
+            .left-box button:hover span{
+                width: 30px;
+            }
+            /* Social link styling */
+            .right-box a{
+                display: block;
+                width: 100%;
+                margin: 20px 0;
+                min-width: 250px;
+                color: black;
+                font-size: 14px;
+                padding: 15px 30px;
+                text-decoration: none;
+            }
+            /* Social icon styling */
+            .right-box a i{
+                font-size: 18px;
+                margin-right: 10px;
+            }
+            /* Facebook link background */
+            .fb-link{
+                background: #1778f2;
+            }
+            /* Twitter/X link background */
+            .tw-link{
+                background: #1da1f2;
+            }
+            /* Google link background */
+            .g-link{
+                background: #ea4335;
+            }
+            /* Login message styling */
+            .login-msg{
+                color: black;
+                margin-top: 10px;
+                font-size: 15px;
+            }
+            /* Login link styling */
+            .login-msg a{
+                color: #ea4335;
+                text-decoration: none;
+            }
+            /* Login link hover effect */
+            .login-msg a:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+    <nav>
+        <!-- Logo images in navigation bar -->
+        <h1>
+            <img src="logo.png" alt="" style="width: 10%; height: 10%;">
+            <img src="default-monochrome-white.svg" alt="My website logo" style="width: 50%;">
+        </h1>
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="naawi.html">Info</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+        <div class="hero">
+            <!-- Main heading -->
+            <h1>Create an Account</h1>
+            <!-- Signup box with form and social links -->
+            <div class="signup-box">
+                <!-- Left: Signup form -->
+                <div class="left-box">
+                    <form>
+                        <!-- Name input -->
+                        <input type="text" placeholder="Your Name" required class="input-box">
+                        <!-- Username input -->
+                        <input type="text" placeholder="username" required class="input-box">
+                        <!-- Email input -->
+                        <input type="email" placeholder="Your Email id" required class="input-box">
+                        <!-- Password input -->
+                        <input type="password" placeholder="Create Password" required class="input-box">
+                        <!-- Terms and conditions checkbox -->
+                        <input type="checkbox" id="terms">
+                        <label for="terms">I accept the terms & conditions.</label>
+                        <!-- Signup button with arrow -->
+                        <button type="submit">SIGN-UP <span>&#x27f6</span></button>
+                    </form>
+                </div>
+                <!-- Right: Social media signup links -->
+                <div class="right-box">
+                    <a href="" class="fb-link"><i class="fa-brands fa-facebook"></i>Connect with Facebook</a>
+                    <a href="" class="tw-link"><i class="fa-brands fa-square-x-twitter"></i>Connect with X</a>
+                    <a href="" class="g-link"><i class="fa-brands fa-google"></i>Connect with Google</a>
+                </div>
+            </div>
+            <!-- Login message for existing users -->
+            <p class="login-msg">I already have an account? <a href="">login now</a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,404 @@
+<!--
+Color Scheme:
+- #F5F0E1: Light warm cream, used as the main background color for a soft, welcoming feel.
+- #b46134: Light brown, used for the sidebar background to create warmth and highlight navigation.
+- #7A5C3E: Darker brown, used for the sidebar border to add contrast and definition.
+- Black: Used for most text and headings for clear readability.
+- White: Used for hover states on sidebar links for contrast and emphasis.
+
+Typography:
+- Main font for sidebar links and headings: Georgia, 'Times New Roman', Times, serif. This serif font gives a formal, traditional, and trustworthy appearance, suitable for cultural and community-focused content.
+- Default font for other text: Inherits browser default (typically sans-serif), ensuring readability and a clean look.
+- Font sizes: Headings and sidebar links use larger font sizes (1.6rem) for emphasis, while body text uses medium size for comfortable reading.
+-->
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Start of HTML document, language set to English -->
+    <head> <!-- Head section: metadata and styles -->
+        <meta charset="UTF-8"> <!-- Character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+        <title>Naawi-Oodena</title> <!-- Page title -->
+        <!-- Favicon -->
+        <link rel="icon" href="logo.png" type="image/icon"> <!-- Sets the favicon for the page -->
+        <link rel="stylesheet" href="style.css"> <!-- External CSS file -->
+        <style>        
+            /* === Page Wrapper === */
+            .page-layout {
+                padding: 20px; /* Space inside the wrapper */
+                background-color: #F5F0E1; /* light warm cream */
+            }
+
+            /* === Main Info === */
+            #main-info {
+                display: block; /* Block display */
+                font-size: medium; /* Medium font size */
+                padding: 25px; /* Padding inside */
+                margin: 10px; /* Margin outside */
+                color: black; /* Text color */
+            }
+
+            /* === Main Container === */
+            .page-layout main {
+                display: flex; /* Flexbox layout */
+                align-items: flex-start; /* Align items at the top */
+                margin-top: 10px; /* Top margin */
+            }
+
+            /* === Sidebar === */
+            .sidebar {
+                background-color: #b46134; /* light brown */
+                padding: 1.5rem; /* Padding inside */
+                border-right: 5px solid #7A5C3E; /* Right border */
+                border-radius: 10px; /* Rounded corners */
+                position: sticky; /* Sticks to top on scroll */
+                top: 0; /* Stick to top */
+                width: 20%; /* Sidebar width */
+                height: calc(100vh - 0px); /* Full viewport height */
+                align-self: flex-start; /* Align at start */
+                overflow-y: auto; /* Scroll if needed */
+                z-index: 10; /* Layer order */
+            }
+
+            .sidebar h4 {
+                font-size: 1.6rem; /* Heading size */
+                color: black; /* Heading color */
+                font-family: Georgia, 'Times New Roman', Times, serif; /* Font */
+                text-align: center; /* Centered text */
+                text-decoration: underline; /* Underline */
+                margin-bottom: 1rem; /* Space below */
+            }
+
+            .sidebar ul {
+                list-style: none; /* No bullets */
+                padding: 0; /* No padding */
+            }
+
+            .sidebar li {
+                margin-bottom: 0.75rem; /* Space between items */
+            }
+
+            .sidebar a {
+                text-decoration: none; /* No underline */
+                color: black; /* Link color */
+                font-family: Georgia, 'Times New Roman', Times, serif; /* Font */
+                font-size: 1.6rem; /* Font size */
+                display: block; /* Block display */
+                text-align: center; /* Centered text */
+            }
+            .sidebar a:hover{
+                text-decoration: underline; /* Underline on hover */
+                color: white; /* White on hover */
+            }
+            /* === Main Content Area === */
+            .everything {
+                flex: 1; /* Take remaining space */
+                margin-left: 2rem; /* Space from sidebar */
+            }
+        </style>
+    </head>
+    <body> <!-- Start of body content -->
+     <nav> <!-- Navigation bar -->
+        <h1> 
+            <img src="logo.png" alt="" style="width: 10%; height: 10%;"> <!-- First logo image -->
+            <img src="default-monochrome-white.svg" alt="My website logo" style="width: 50%;"> <!-- Second logo image -->
+        </h1>
+        <ul> <!-- Navigation links -->
+            <li><a href="index.html">HOME</a></li> <!-- Home link -->
+            <li><a href="naawi.html">Info</a></li> <!-- Info link -->
+            <li><a href="gallery.html">Gallery</a></li> <!-- Gallery link -->
+            <li><a href="contact.html">Contact</a></li> <!-- Contact link -->
+        </ul>
+    </nav>
+        <div class="page-layout"> <!-- Main page wrapper -->
+            <div id="main-info"> <!-- Main info section -->
+                <h1 style="color: black;">
+                    <b>
+                        <u>Naawi-Oodena</u> <!-- Underlined title -->
+                    </b>
+                </h1>
+                <p>
+                    <!-- Description of Naawi-Oodena -->
+                    Naawi-Oodena means “the heart of the community” in the Anishinaabe language. It used to be called Kapyong Barracks. Today, it's a special place in Winnipeg where many people come together. It’s only 7 km from downtown and covers 160 acres of land. The land is shared between Treaty One Nations and the Government of Canada. Treaty One Nations owns about 68% while Canadas Land Company owns the rest of the 32%.
+                </p>
+                <p>
+                    <!-- More info about the project -->
+                    After a lot of planning and back and forth with the Goverment, a big plan for the land was made in March 2021. The idea is to build homes, parks, stores, and places where people can play and meet. It will have between 2,300 and 3,000 homes. Naawi-Oodena is now one of the biggest projects ever in Winnipeg, and it’s the largest space in Canada made for Indigenous businesses and communities in a city.
+                </p>
+            </div>
+            <main> <!-- Main content area with sidebar and main section -->
+                <aside class="sidebar"> <!-- Sidebar with quick links and sources -->
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://www.google.ca/maps/place/Naawi-Oodena,+Winnipeg,+MB/@49.8541241,-97.2271292,15z/data=!3m1!4b1!4m10!1m2!2m1!1sKapyong+Barracks!3m6!1s0x52ea74eab82e68cb:0x4ffc4bf8a3a9cf2f!8m2!3d49.850994!4d-97.210493!15sChBLYXB5b25nIEJhcnJhY2tzkgELcmVzZXJ2YXRpb26qAU4QASoUIhBrYXB5b25nIGJhcnJhY2tzKAAyHhABIhpb7ss5zC1OIVbBsg4CHBrpA6ZAxATEFUj77DIUEAIiEGthcHlvbmcgYmFycmFja3PgAQA!16s%2Fg%2F11sd8qp76y?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">Naawi-Oodena</a></li> <!-- Google Maps link -->
+                        <li><a href="#community-spaces">Fun Outdoor Spaces</a></li> <!-- Internal link -->
+                        <li><a href="#mixed-use-village">Busy Village Area</a></li>
+                        <li><a href="#commercial-mixed-use">Shopping & Business Area</a></li>
+                        <li><a href="#community-design-highlights">Cool Design Ideas</a></li>
+                        <li><a href="#sustainability-innovation">Helping the Planet</a></li>
+                        <li><a href="#cultural-identity">Culture & Art</a></li>
+                        <li><a href="#infrastructure-connectivity">Roads & Utilities</a></li>
+                    </ul>
+                    <h4>Sources</h4>
+                    <ul>
+                        <li><a href="https://www.winnipeg.ca/ppd/planning/naawi-oodena.stm">City of Winnipeg</a></li> <!-- Source links -->
+                        <li><a href="https://www.winnipegfreepress.com/local/2021/03/25/naawi-oodena-development-to-be-a-first-of-its-kind-in-canada">Winnipeg Free Press</a></li>
+                        <li><a href="https://www.clc-sic.ca/real-estate/naawi-oodena">Canadas Land Company</a></li>
+                        <li><a href="https://treaty1.ca/naawi-oodena/">Treaty 1 website</a></li>
+                        <li><a href="https://www.cbc.ca/news/canada/manitoba/naawi-oodena-repatriation-winnipeg-largest-urban-reserve-1.6691359">CBC News</a></li>
+                        <li><a href="https://www.winnipeg.ca/fr/node/33410">Winnipeg.ca</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Naawi-Oodena">Wikipedia</a></li>
+                </aside>
+                <div class="everything"> <!-- Main content area -->
+                    <section class="section-homes"> <!-- Section for homes -->
+                        <br> <!-- Line break -->
+                        <hr> <!-- Horizontal rule -->
+                        <br>
+                        <article id="home-areas"> <!-- Article about home areas -->
+                            <div id="homes-title">
+                                <h1>
+                                    <b>
+                                        <u>Homes in Naawi-Oodena</u> <!-- Underlined section title -->
+                                    </b>
+                                </h1>
+                            </div>
+                            <br>
+                            <div id="medium-homes"> <!-- Medium homes info -->
+                                <h3>
+                                    <i>Medium Homes – Along Kenaston Boulevard</i>
+                                </h3>
+                                <p>
+                                    <!-- Description of medium homes -->
+                                    Medium homes are in the middle and are not too crowded, not too spaced out. They are built in a way that will help people live close to stores and buses. These homes are good for families, older adults, and people with different needs.
+                                </p>
+                                <ul>
+                                    <li><b>Different types of homes</b>: Big and small homes, apartments, and houses for all kinds of people and incomes.</li>
+                                    <li><b>Nice design</b>: The buildings look good and fit the area well.</li>
+                                    <li><b>Easy to walk around</b>: Sidewalks and paths help people walk safely.</li>
+                                    <li><b>Neat look</b>: Parking and garbage areas are hidden so the neighborhood looks nice.</li>
+                                </ul>
+                                <p><b>This area has:</b></p>
+                                <ul>
+                                    <li>Small and tall apartment buildings (up to 6 floors)</li>
+                                    <li>Townhomes stacked on top of each other</li>
+                                    <li>Live-work homes where people can live and run small businesses</li>
+                                    <li>Small shops on the bottom floor of buildings</li>
+                                </ul>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10289.516188432872!2d-97.22712918386398!3d49.854124052038536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea74eab82e68cb%3A0x4ffc4bf8a3a9cf2f!2sNaawi-Oodena%2C%20Winnipeg%2C%20MB!5e0!3m2!1sen!2sca!4v1747794475764!5m2!1sen!2sca" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Embedded Google Map -->
+                            </div>
+
+
+                            <br>
+                            <hr>
+                            <br>
+                            <div id="low-homes"> <!-- Lower homes info -->
+                                <h3>
+                                    <i>Lower Homes – Quieter Area</i>
+                                </h3>
+                                <p>
+                                    <!-- Description of lower homes -->
+                                    These homes are more spread out and feel like a quiet neighborhood. They are near places where people already live, so they fit in nicely. There’s more space and fewer people in this area.
+                                </p>
+                                <ul>
+                                    <li><b>Different kinds of houses</b>: Big houses, townhouses, and homes with a few apartments inside.</li>
+                                    <li><b>Good design</b>: The homes are built to look nice and last a long time.</li>
+                                    <li><b>Clean look</b>: Parking and service areas are kept out of view.</li>
+                                </ul>
+                                <p><b>This area includes:</b></p>
+                                <ul>
+                                    <li>Houses for one or two families</li>
+                                    <li>Townhouses and small apartment buildings</li>
+                                    <li>Homes with 3 or 4 small units inside (triplexes/fourplexes)</li>
+                                    <li>Extra small homes like basement apartments or backyard suites</li>
+                                </ul>
+                                <p>
+                                    Most of the buildings are up to 3.5 floors tall. This helps keep the area feeling cozy and calm.
+                                </p>
+                            </div>
+                        </article>
+                        <br>
+                        <hr>
+                        <br>
+                        <article id="mixed-use-village"> <!-- Busy village area -->
+                            <h3>
+                                <i>Busy Village Area</i>
+                            </h3>
+                            <p>
+                                This area has homes, shops, and fun places to go. It's close to buses and easy to walk around.
+                            </p>
+                            <ul>
+                                <li><b>Many Uses</b>: Includes homes, shops, cafes, offices, and more.</li>
+                                <li><b>Active Streets</b>: Stores and restaurants on the ground floor, homes above.</li>
+                                <li><b>Nice Design</b>: Buildings look good and feel like a real community.</li>
+                                <li><b>Easy Walking</b>: Buildings have doors and windows that face the street.</li>
+                                <li><b>Hidden Parking</b>: Parking is behind or inside buildings so streets look nice.</li>
+                                <li><b>Different Homes</b>: Homes for different families and needs.</li>
+                            </ul>
+                        </article>
+                        <br>
+                        <hr>
+                        <br>
+                        <article id="commercial-mixed-use"> <!-- Shopping & business area -->
+                            <h3>
+                                <i>Shopping & Business Area</i>
+                            </h3>
+                            <p>
+                                A place with stores, offices, and fun places to visit. It will be easy to get to and look really nice.
+                            </p>
+                            <ul>
+                                <li><b>Lots of Shops</b>: Big and small stores all in one place.</li>
+                                <li><b>Culture Spaces</b>: Special buildings for art and community events.</li>
+                                <li><b>Easy to Get To</b>: Made for walking, biking, driving, and taking the bus.</li>
+                                <li><b>Good-Looking Buildings</b>: Nice, well-designed buildings everywhere.</li>
+                                <li><b>Neat Streets</b>: Parking is hidden so the streets look clean and nice.</li>
+                                <li><b>Friendly to Homes</b>: Shops are placed to not bother nearby houses.</li>
+                            </ul>
+                        </article>
+                        <br>
+                        <hr>
+                        <br>
+                        <article id="community-design-highlights"> <!-- Cool design ideas -->
+                            <h3>
+                                <i>Cool Design Ideas</i>
+                            </h3>
+                            <p>
+                                Here are 6 big ideas to make the area fun and full of meaning:
+                            </p>
+                            <ul>
+                                <li><b>Iconic</b>: Use special plants, materials, and local art.</li>
+                                <li><b>Evocative</b>: Use sounds, smells, and sights to make it feel special.</li>
+                                <li><b>Healthy</b>: Add gardens, fruit trees, and even rice in ponds.</li>
+                                <li><b>Indigenous</b>: Work with Indigenous leaders and grow special plants.</li>
+                                <li><b>Educational</b>: Add signs and places where people can learn by doing.</li>
+                                <li><b>Year-Round</b>: Make it fun in winter too, with snow play and warm spots.</li>
+                            </ul>
+                        </article>
+                        <br>
+                        <hr>
+                        <br>
+                        <article id="sustainability-innovation"> <!-- Sustainability section -->
+                            <h3>
+                                <i>Helping the Planet</i>
+                            </h3>
+                            <p>
+                                This plan helps nature and keeps things green and clean.
+                            </p>
+                            <ul>
+                                <li><b>Green Energy</b>: Use solar and wind power and save energy.</li>
+                                <li><b>Eco Travel</b>: Walk, bike, and use the bus more than driving.</li>
+                                <li><b>Nature Spaces</b>: Add rain gardens and green roofs to help with water.</li>
+                                <li><b>Healthy People</b>: Add trails and parks to help people stay active and happy.</li>
+                            </ul>
+                        </article>
+                        <br>
+                        <hr>
+                        <br>
+                        <article id="cultural-identity"> <!-- Culture & art section -->
+                            <h3>
+                                <i>Culture & Art</i>
+                            </h3>
+                            <p>
+                                The area will show Indigenous culture in buildings, street names, and public art.
+                            </p>
+                            <ul>
+                                <li><b>Cool Buildings</b>: Use Indigenous designs and Ojibwe street names.</li>
+                                <li><b>Public Art</b>: Add lots of art from First Nations artists in public spaces.</li>
+                                <li><b>Special Names</b>: Streets and parks will have meaningful names chosen by Indigenous leaders.</li>
+                            </ul>
+                        </article>
+                        <br>
+                        <hr>
+                        <br>
+                        <article id="infrastructure-connectivity"> <!-- Infrastructure section -->
+                            <h3>
+                                <i>Roads & Utilities</i>
+                            </h3>
+                            <p>
+                                The city will build roads, pipes, and bus stops in a smart way to help everything work together.
+                            </p>
+                            <ul>
+                                <li><b>Travel Plans</b>: Sidewalks, bike lanes, and safe crossings for everyone.</li>
+                                <li><b>Water & Power</b>: Clean water and power for homes and stores.</li>
+                                <li><b>Rain & Waste</b>: Special ponds and pipes to manage rain and dirty water.</li>
+                            </ul>
+                        </article>
+                    </section>
+                    <br>
+                    <hr>
+                    <br>
+                    <article id="fun-zone"> <!-- Sports and fun area -->
+                        <h3>
+                            <i>Sports and Fun Area</i>
+                        </h3>
+                        <p>
+                            This part of Naawi-Oodena is made for fun and health! It’s a big space where people can play sports, walk, relax, and join cultural events. It’s easy to get to and great for big events.
+                        </p>
+                        <ul>
+                            <li><b>Community Fun</b>: Large fields, arenas, and centres where people can play games or join festivals.</li>
+                            <li><b>Stay Healthy</b>: Trails and green areas to run, walk, or just relax.</li>
+                            <li><b>Culture and Traditions</b>: A place for dances, shows, and gatherings to celebrate Indigenous culture.</li>
+                            <li><b>Special Spot</b>: A powwow circle is there for big cultural events.</li>
+                        </ul>
+                        <p><b>This area also has:</b></p>
+                        <ul>
+                            <li>Indoor and outdoor sports places</li>
+                            <li>Spots for shows and celebrations</li>
+                            <li>Nearby shops and services</li>
+                            <li>Designs that work in all seasons (with lights and shelter)</li>
+                            <li>Paths for walking, biking, and driving</li>
+                            <li>Parking hidden behind buildings to keep things looking nice</li>
+                        </ul>
+                    </article>
+                    <br>
+                    <hr>
+                    <br>
+                    <article id="learning-space"> <!-- Learning and culture area -->
+                        <h3>
+                            <i>Learning and Culture Area</i>
+                        </h3>
+                        <p>
+                            This part is for learning, sharing stories, and working together. It’s a space where Indigenous knowledge, art, and education come together. It’s open to everyone and helps people learn and grow.
+                        </p>
+                        <ul>
+                            <li><b>Treaty One Office</b>: A place where leaders work and help make big decisions.</li>
+                            <li><b>Meeting Places</b>: Spots where people can come together and share stories or ideas.</li>
+                            <li><b>Learning Centre</b>: A place with classrooms and spaces to build and create.</li>
+                            <li><b>Art and Culture</b>: Museums, galleries, and stages for shows and history.</li>
+                            <li><b>Learning About Truth</b>: Places that teach about Indigenous stories and help people understand history better.</li>
+                        </ul>
+                        <p><b>This area also has:</b></p>
+                        <ul>
+                            <li>Schools, offices, and hotels</li>
+                            <li>Shops and food places for students and visitors</li>
+                            <li>Paths for easy walking and biking</li>
+                            <li>Parking hidden to keep the space pretty</li>
+                        </ul>
+                    </article>
+                    <br>
+                    <hr>
+                    <br>
+                    <article id="community-spaces"> <!-- Fun outdoor spaces -->
+                        <h3>
+                            <i>Fun Outdoor Spaces</i>
+                        </h3>
+                        <p>
+                            These are parks and open areas where people can relax, play, and have fun together. They are made to be used all year and show respect for history and nature.
+                        </p>
+                        <ul>
+                            <li><b>Lots of Green Areas</b>: Parks, trails, and plazas are connected for everyone to enjoy.</li>
+                            <li><b>All-Season Fun</b>: Wind protection, shady spots, and lights let people use them anytime.</li>
+                            <li><b>For Everyone</b>: Easy for all people to use, with native plants and art.</li>
+                            <li><b>Big or Small Events</b>: Good for quiet time or big festivals like powwows.</li>
+                            <li><b>Good for Nature</b>: Plants and systems that help the earth.</li>
+                            <li><b>Beautiful Art</b>: Art made by Indigenous artists all around the area.</li>
+                            <li><b>Honouring History</b>: Monuments that show the past and military history.</li>
+                        </ul>
+                    </article>
+                </div>
+            </main>
+        </div>
+        <footer> <!-- Footer section -->
+            <p>
+                Page created by Naawi-Oodena Team | Contact: <a href="mailto:info@naawi-oodena.com">info@naawi-oodena.com</a>
+            </p>
+        </footer>
+    </body>
+</html>

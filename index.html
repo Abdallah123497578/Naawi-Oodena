@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="en"> <!-- Root element, sets language to English -->
+    <head> <!-- Head section containing meta and link tags -->
+        <!-- Character encoding -->
+        <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+        <!-- Responsive viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on all devices -->
+        <!-- External stylesheet -->
+        <link rel="stylesheet" href="style.css"> <!-- Links to external CSS file -->
+        <!-- Page title -->
+        <title>Home</title> <!-- Sets the page title -->
+        <!-- Favicon -->
+        <link rel="icon" href="logo.png" type="image/icon"> <!-- Sets the favicon for the page -->
+        <!-- Inline styles -->
+        <style>
+            /* Navigation bar styling */
+            nav {
+                margin-bottom: 0px; /* Removes bottom margin from nav */
+            }
+            /* Main background styling */
+            div {
+                min-height: 110vh; /* Sets minimum height to 110% of viewport height */
+                background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)) ,url("home.jpg"); /* Sets background image */
+                background-size: cover; /* Ensures background covers the div */
+                margin-top: 0px; /* Removes top margin */
+            }
+            /* Article heading styling */
+            .article {
+                width: 50%; /* Sets width to 50% */
+                margin: auto; /* Centers horizontally */
+                text-align: center; /* Centers text */
+                transform: translateY(25vh); /* Moves down by 25% of viewport height */
+                color: white; /* Sets text color to white */
+                font-size: 90px; /* Sets font size */
+                letter-spacing: 1.5px; /* Adds space between letters */
+                font-weight: 600; /* Makes text bold */
+                margin-bottom: 25px; /* Adds space below */
+                line-height: 1.5; /* Sets line height */
+            }
+        </style>
+    </head>
+    <body> <!-- Body section containing visible content -->
+        <!-- Navigation bar -->
+        <nav>
+            <h1>
+                <!-- Logo images -->
+                <img src="logo.png" alt="" style="width: 10%; height: 10%;"> <!-- First logo image -->
+                <img src="default-monochrome-white.svg" alt="My website logo" style="width: 50%;"> <!-- Second logo image -->
+            </h1>
+            <ul>
+                <!-- Navigation links -->
+                <li><a href="index.html">HOME</a></li> <!-- Home link -->
+                <li><a href="naawi.html">Info</a></li> <!-- Info link -->
+                <li><a href="gallery.html">Gallery</a></li> <!-- Gallery link -->
+                <li><a href="contact.html">Contact</a></li> <!-- Contact link -->
+            </ul>
+        </nav>
+        <!-- Main content section with background image -->
+        <div class="">
+            <!-- Welcome heading -->
+            <h1 class="article">Welcome to Naawi-Oodena</h1> <!-- Main welcome message -->
+        </div>
+        <!-- Footer section -->
+        <footer>
+            <p>
+                Page created by Naawi-Oodena Team | <!-- Footer text -->
+                Contact: <a href="mailto:info@naawi-oodena.com">info@naawi-oodena.com</a> <!-- Contact email link -->
+            </p>
+        </footer>
+    </body>
+</html>
